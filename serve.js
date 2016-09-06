@@ -23,11 +23,11 @@ function serve(keypair) {
   app.use('/', serveStatic);
 
 
-  plainServer.listen(3000, function () {
+  plainServer.listen(80, function () {
     console.log('Listening on http://127.0.0.1:' + plainServer.address().port);
   });
 
-  tlsServer.listen(3443, function () {
+  tlsServer.listen(443, function () {
     console.log('Listening on https://localhost.daplie.com:' + tlsServer.address().port);
   });
 }
